@@ -5,6 +5,14 @@ xcode_project: travis-ci-integration.xcodeproj
 xcode_scheme: travis-ci-integration
 xcode_sdk: iphonesimulator8.4
 xcode_destination: platform=iOS Simulator,OS=13.2,name=iPhone X
-script: xcodebuild -project travis-ci-integration.xcodeproj -target travis-ci-integration -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 before_install: cd travis-ci-integration
 
+
+jobs:
+  include:
+    - stage: build
+      script: xcodebuild -project travis-ci-integration.xcodeproj -target travis-ci-integration -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+#  - # stage name not required, will continue to use `test`
+#    script: ./test 2
+#  - stage: deploy
+#    script: ./deploy
