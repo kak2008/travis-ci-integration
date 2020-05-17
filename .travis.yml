@@ -5,7 +5,7 @@ xcode_project: travis-ci-integration.xcodeproj
 xcode_scheme: travis-ci-integration
 xcode_test_scheme: travis-ci-integration-test
 xcode_sdk: iphonesimulator8.4
-xcode_destination: platform=iOS Simulator,OS=13.3,name=iPhone 11 Pro
+xcode_destination: platform=iOS Simulator,OS=13.2,name=iPhone X
 before_install: cd travis-ci-integration
 
 
@@ -14,8 +14,9 @@ jobs:
     - stage: build
       script: xcodebuild -project travis-ci-integration.xcodeproj -target travis-ci-integration -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
     - stage: test
-      script: xcodebuild -workspace travis-ci-integration.xcworkspace -scheme travis-ci-integration-test -enableCodeCoverage YES clean build test ONLY_ACTIVE_ARCH=NO
+      script: xcodebuild -workspace travis-ci-integration.xcworkspace -scheme travis-ci-integration-test -destination 'platform=iOS Simulator,OS=13.3,name=iPhone 11 Pro' -enableCodeCoverage YES clean build test ONLY_ACTIVE_ARCH=NO
 #  - # stage name not required, will continue to use `test`
 #    script: ./test 2
 #  - stage: deploy
 #    script: ./deploy
+# OS:13.3, name:iPhone 11 Pro
