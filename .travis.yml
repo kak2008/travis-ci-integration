@@ -12,9 +12,9 @@ before_install: cd travis-ci-integration
 jobs:
   include:
     - stage: build
-      script: xcodebuild -project xcode_project -target xcode_scheme -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+      script: xcodebuild -project travis-ci-integration.xcodeproj -target travis-ci-integration -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
     - stage: test
-      script: xcodebuild -project xcode_project -target xcode_test_scheme -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+      script: xcodebuild -project travis-ci-integration.xcodeproj -target {xcode_test_scheme} -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 #  - # stage name not required, will continue to use `test`
 #    script: ./test 2
 #  - stage: deploy
