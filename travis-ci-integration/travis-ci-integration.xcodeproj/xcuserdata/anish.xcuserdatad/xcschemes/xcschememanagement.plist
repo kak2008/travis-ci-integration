@@ -4,10 +4,35 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>travis-ci-integration.xcscheme_^#shared#^_</key>
+		<key>travis-ci-integration-test.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>travis-ci-integration.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>F80501D024714381008DCE06</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F80501E624714382008DCE06</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F80501F124714382008DCE06</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

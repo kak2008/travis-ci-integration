@@ -10,9 +10,10 @@ import XCTest
 @testable import travis_ci_integration
 
 class travis_ci_integrationTests: XCTestCase {
-
+    var something = "heelpo"
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
     }
 
     override func tearDown() {
@@ -20,8 +21,7 @@ class travis_ci_integrationTests: XCTestCase {
     }
 
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+       XCTAssertNotNil(something)
     }
 
     func testPerformanceExample() {
