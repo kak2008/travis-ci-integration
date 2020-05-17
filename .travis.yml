@@ -14,7 +14,7 @@ jobs:
     - stage: build
       script: xcodebuild -project travis-ci-integration.xcodeproj -target travis-ci-integration -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
     - stage: test
-      script: xcodebuild -workspace travis-ci-integration.xcworkspace -scheme travis-ci-integration-test -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+      script: xcodebuild test-without-building -workspace travis-ci-integration.xcworkspace -scheme travis-ci-integration-test -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 
 #  - # stage name not required, will continue to use `test`
 #    script: ./test 2
