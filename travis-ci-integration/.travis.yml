@@ -1,3 +1,8 @@
 # travis-ci-integration
+osx_image: xcode11.3
 language: swift
+xcode_project: travis-ci-integration.xcodeproj
+xcode_scheme: travis-ci-integration
+xcode_sdk: iphonesimulator8.4
+xcode_destination: platform=iOS Simulator,OS=13.2,name=iPhone X
 
