@@ -1,0 +1,6 @@
+framework module Pods_travis_ci_integration {
+  umbrella header "Pods-travis-ci-integration-umbrella.h"
+
+  export *
+  module * { export * }
+}

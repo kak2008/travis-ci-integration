@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_travis_ci_integration_travis_ci_integrationUITests : NSObject
+@end
+@implementation PodsDummy_Pods_travis_ci_integration_travis_ci_integrationUITests
+@end
