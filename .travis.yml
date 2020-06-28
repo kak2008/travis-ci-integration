@@ -11,9 +11,9 @@ before_install: cd travis-ci-integration
 jobs:
     # replcae secret with new key
     # GoogleService-Info.plist - CLIENT_ID
-    plutil -replace CLIENT_ID -string Environment.GetEnvironmentVariable("alcas") travis-ci-integration/GoogleService-Info.plist
 
   include:
+    script: plutil -replace CLIENT_ID -string Environment.GetEnvironmentVariable("alcas") travis-ci-integration/GoogleService-Info.plist
     - stage: build
       script: xcodebuild -project travis-ci-integration.xcodeproj -target travis-ci-integration -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
     - stage: test
