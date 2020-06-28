@@ -9,16 +9,11 @@ xcode_destination: platform=iOS Simulator,OS=13.2,name=iPhone X
 before_install: cd travis-ci-integration
 
 jobs:
-    # replcae secret with new key
-    # GoogleService-Info.plist - CLIENT_ID
-
   include:
-    script: plutil -replace CLIENT_ID -string Environment.GetEnvironmentVariable("alcas") travis-ci-integration/GoogleService-Info.plist
     - stage: build
       script: xcodebuild -project travis-ci-integration.xcodeproj -target travis-ci-integration -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
     - stage: test
       script: xcodebuild clean build test -workspace travis-ci-integration.xcworkspace -scheme "travis-ci-integration-test" -destination "platform=iOS Simulator,OS=13.3,name=iPhone 11 Pro"
-      script: plutil -extract CLIENT_ID xml1 -o -travis-ci-integration/GoogleService-Info.plist
 #  - # stage name not required, will continue to use `test`
 #    script: ./test 2
 #  - stage: deploy
